@@ -1,7 +1,7 @@
 #!/bin/bash
 
 date=$(date +%F)
-time=$(date +%T)
+time=$(date +%Ihr)
 
 mkdir --parents /usr/local/speedtest_daily_report/"$date"
 
@@ -14,6 +14,9 @@ do
    speedtest -s $i --format=csv >> /usr/local/speedtest_daily_report/"$date"/speedtest_report_"$time".csv
 
 done
+
+curl  -u 'noc_bot:Gtmh123!@#' -X MKCOL  "https://app.gtmh-telecom.com/nextcloud/remote.php/dav/files/noc_bot/NOC_SPEEDTEST_REPORT/"$date"
+curl -T /usr/local/speedtest_daily_report/"$date"/speedtest_report_"$time".csv  -u 'noc_bot:Gtmh123!@#' "https://app.gtmh-telecom.com/nextcloud/remote.php/dav/files/noc_bot/NOC_SPEEDTEST_REPORT/"$date"/speedtest_report_"$time".csv"
 
 
 
