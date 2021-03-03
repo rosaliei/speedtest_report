@@ -15,8 +15,5 @@ do
 
 done
 
-curl  -u 'noc_bot:Gtmh123!@#' -X MKCOL  "https://app.gtmh-telecom.com/nextcloud/remote.php/dav/files/noc_bot/NOC_SPEEDTEST_REPORT/"$date"
+curl  -u 'noc_bot:Gtmh123!@#' -X MKCOL  "https://app.gtmh-telecom.com/nextcloud/remote.php/dav/files/noc_bot/NOC_SPEEDTEST_REPORT/"$date""
 curl -T /usr/local/speedtest_daily_report/"$date"/speedtest_report_"$time".csv  -u 'noc_bot:Gtmh123!@#' "https://app.gtmh-telecom.com/nextcloud/remote.php/dav/files/noc_bot/NOC_SPEEDTEST_REPORT/"$date"/speedtest_report_"$time".csv"
-
-
-
