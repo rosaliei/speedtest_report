@@ -1,4 +1,4 @@
-# SpeedTest OutPut Script
+# SpeedTest Report For NOC
 
 **This script is intended to generate speedtest report from local ISP and some international ISP.**
 
